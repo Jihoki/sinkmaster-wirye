@@ -1,0 +1,6 @@
+{
+  "name": "싱크마스터",
+  "description": "위례 싱크대 막힘·역류·배수통 교체·수전 교체 전문 (대표직접시공 · 못 뚫으면 0원 · 24시간 긴급 출동)",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
