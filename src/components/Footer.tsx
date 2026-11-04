@@ -4,7 +4,7 @@ import { SITE_INFO } from '../data/siteData';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-xs">
+    <footer className="bg-slate-900 text-slate-400 pt-12 pb-28 sm:pb-16 border-t border-slate-800 text-xs">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Top Info Row */}
@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
               className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs sm:text-sm transition-colors shadow-md"
             >
               <Phone className="w-4 h-4" />
-              <span>긴급 전화 연결 ({SITE_INFO.phone})</span>
+              <span>긴급 출동 상담 ({SITE_INFO.phone})</span>
             </a>
           </div>
         </div>
@@ -37,24 +37,32 @@ export const Footer: React.FC = () => {
           <div className="space-y-1.5 leading-relaxed">
             <div className="flex flex-wrap gap-x-4 gap-y-1">
               <span>
-                <strong className="text-slate-200 font-semibold">상호명:</strong> {SITE_INFO.brandName}
+                <strong className="text-slate-300 font-semibold">상호명:</strong> {SITE_INFO.brandName}
               </span>
               <span>
-                <strong className="text-slate-200 font-semibold">대표 전화:</strong>{' '}
-                <a href={SITE_INFO.phoneTel} className="text-slate-200 hover:underline">
-                  {SITE_INFO.phone}
+                <strong className="text-slate-300 font-semibold">대표자:</strong> {SITE_INFO.ownerName}
+              </span>
+              <span>
+                <strong className="text-slate-300 font-semibold">대표 전화:</strong>{' '}
+                <a href={`tel:${SITE_INFO.legalPhone.replace(/-/g, '')}`} className="text-slate-300 hover:underline">
+                  {SITE_INFO.legalPhone}
                 </a>
-              </span>
-              <span>
-                <strong className="text-slate-200 font-semibold">사업자등록번호:</strong> {SITE_INFO.businessNumber}
               </span>
             </div>
             <div className="flex flex-wrap gap-x-4 gap-y-1">
               <span>
-                <strong className="text-slate-200 font-semibold">이메일:</strong> {SITE_INFO.email}
+                <strong className="text-slate-300 font-semibold">사업자등록번호:</strong> {SITE_INFO.businessNumber}
               </span>
               <span>
-                <strong className="text-slate-200 font-semibold">책임 권역:</strong> {SITE_INFO.areaSummary}
+                <strong className="text-slate-300 font-semibold">이메일:</strong> {SITE_INFO.email}
+              </span>
+            </div>
+            <div className="flex flex-wrap gap-x-4 gap-y-1 text-slate-400">
+              <span>
+                <strong className="text-slate-300 font-semibold">긴급 출동 직통:</strong> {SITE_INFO.phone}
+              </span>
+              <span>
+                <strong className="text-slate-300 font-semibold">책임 권역:</strong> {SITE_INFO.areaSummary}
               </span>
             </div>
             <p className="text-[11px] text-slate-500 pt-1">
@@ -69,6 +77,20 @@ export const Footer: React.FC = () => {
             <p className="text-[11px] text-slate-600">
               Reliable residential kitchen plumbing & scaling service.
             </p>
+          </div>
+        </div>
+
+        {/* Subtle Bottom Information Strip */}
+        <div className="mt-8 pt-4 border-t border-slate-800/80 text-[11px] text-slate-500 flex flex-wrap items-center justify-between gap-3">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span>대표 전화 : {SITE_INFO.legalPhone}</span>
+            <span aria-hidden="true" className="text-slate-700">|</span>
+            <span>대표자 : {SITE_INFO.ownerName}</span>
+            <span aria-hidden="true" className="text-slate-700">|</span>
+            <span>사업자등록번호 : {SITE_INFO.businessNumber}</span>
+          </div>
+          <div className="text-slate-500">
+            <span>위례신도시 24시간 긴급 출동</span>
           </div>
         </div>
 

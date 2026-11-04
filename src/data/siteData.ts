@@ -30,6 +30,8 @@ export const SITE_INFO = {
   phoneFormatted: '010-5024-8204',
   phoneTel: 'tel:01050248204',
   smsTel: 'sms:01050248204',
+  ownerName: '현미경',
+  legalPhone: '010-2796-2080',
   businessNumber: '849-13-02664',
   email: 'jjcow0518@naver.com',
   areaSummary: '위례신도시 전 지역(송파·성남·하남) 20~30분 긴급 출동',
