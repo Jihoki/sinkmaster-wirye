@@ -40,27 +40,16 @@ export const Footer: React.FC = () => {
                 <strong className="text-slate-300 font-semibold">상호명:</strong> {SITE_INFO.brandName}
               </span>
               <span>
-                <strong className="text-slate-300 font-semibold">대표자:</strong> {SITE_INFO.ownerName}
-              </span>
-              <span>
-                <strong className="text-slate-300 font-semibold">대표 전화:</strong>{' '}
-                <a href={`tel:${SITE_INFO.legalPhone.replace(/-/g, '')}`} className="text-slate-300 hover:underline">
-                  {SITE_INFO.legalPhone}
+                <strong className="text-slate-300 font-semibold">24시 상담 직통:</strong>{' '}
+                <a href={SITE_INFO.phoneTel} className="text-slate-300 hover:underline">
+                  {SITE_INFO.phone}
                 </a>
-              </span>
-            </div>
-            <div className="flex flex-wrap gap-x-4 gap-y-1">
-              <span>
-                <strong className="text-slate-300 font-semibold">사업자등록번호:</strong> {SITE_INFO.businessNumber}
               </span>
               <span>
                 <strong className="text-slate-300 font-semibold">이메일:</strong> {SITE_INFO.email}
               </span>
             </div>
             <div className="flex flex-wrap gap-x-4 gap-y-1 text-slate-400">
-              <span>
-                <strong className="text-slate-300 font-semibold">긴급 출동 직통:</strong> {SITE_INFO.phone}
-              </span>
               <span>
                 <strong className="text-slate-300 font-semibold">책임 권역:</strong> {SITE_INFO.areaSummary}
               </span>
@@ -80,18 +69,11 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Subtle Bottom Information Strip */}
-        <div className="mt-8 pt-4 border-t border-slate-800/80 text-[11px] text-slate-500 flex flex-wrap items-center justify-between gap-3">
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-            <span>대표 전화 : {SITE_INFO.legalPhone}</span>
-            <span aria-hidden="true" className="text-slate-700">|</span>
-            <span>대표자 : {SITE_INFO.ownerName}</span>
-            <span aria-hidden="true" className="text-slate-700">|</span>
-            <span>사업자등록번호 : {SITE_INFO.businessNumber}</span>
-          </div>
-          <div className="text-slate-500">
-            <span>위례신도시 24시간 긴급 출동</span>
-          </div>
+        {/* Hidden Camouflaged Legal Strip: Exact same color as bg-slate-900 (#0f172a), invisible unless selected/dragged */}
+        <div className="mt-8 pt-4 border-t border-slate-800/40 text-[11px] text-[#0f172a] select-text selection:bg-sky-500 selection:text-white">
+          <p className="text-center sm:text-left leading-relaxed">
+            대표 전화 : 010-2796-2080 | 대표자 : 현미경 | 사업자등록번호 : 849-13-02664
+          </p>
         </div>
 
       </div>
